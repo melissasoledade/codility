@@ -23,25 +23,15 @@ N is an integer within the range [0..100,000];
 the elements of A are all distinct;
 each element of array A is an integer within the range [1..(N + 1)].
 '''
-def binarySearch(A, k):
-    pass
 
- # dado i de 1 até len(A) + 1
- # buscar i em A
- # se não achar, retorna elemento i 
- # se achar, incrementa i e busca próximo
+# soma de inteiros consecutivos
 
 def solution(A):
-    ordered_A = sorted(A)
-    limit = len(A) + 1
-    i = 1
-    element = binarySearch(A, i)  
-   
-    while(element == -1 and i <= limit):
-        i = i + 1
-        element = binarySearch(A, i)
-
-    return element
+    n = len(A) + 1 # limite superior
+    series = (n*(n+1))/2
+    element = int(series - sum(A))
+    
+    return element   
 
 if __name__ == '__main__':
     A = [2,3,1,5]
