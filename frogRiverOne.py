@@ -1,16 +1,11 @@
 
 def solution(X, A):
-    numbers = list(range(1, X+1)) # creates array from 1 to X + 1
-    time = 0
+    numbers = {}
        
     for i in range(0, len(A)):
-        try:
-            numbers.remove(A[i])
-            time = i
-        except:
-            pass
-        if(len(numbers) == 0):
-            return time
+        numbers[A[i]] = i
+        if(len(numbers) == X):
+            return i
     return -1       
    
 
