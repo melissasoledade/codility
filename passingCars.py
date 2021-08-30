@@ -17,6 +17,9 @@ def solution(A):
             ones = ones + 1
         else:
             passing = passing + ones
+        
+        if(passing > 1000000000):
+            return -1
     return passing
 
 if __name__ == '__main__':
